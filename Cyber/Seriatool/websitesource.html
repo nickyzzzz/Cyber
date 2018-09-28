@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hackazon </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <!--link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=McLaren">
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'-->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="/css/ekko-lightbox.css" rel="stylesheet">
+    <link href="/css/star-rating.min.css" rel="stylesheet">
+    <link href="/css/nivo-slider.css" rel="stylesheet">
+    <link href="/css/nivo-themes/bar/bar.css" rel="stylesheet">
+    <link href="/css/nivo-themes/light/light.css" rel="stylesheet">
+    <link href="/css/bootstrapValidator.css" rel="stylesheet">
+    <link href="/css/modern-business.css" rel="stylesheet">
+    <link href="/css/ladda-themeless.min.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="/css/subcategory.css" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet">
+    <link href="/css/sidebar.css" rel="stylesheet">
+
+        <script type="text/javascript">
+        var App = window.App || {};
+        App.config = {"host":"http:\/\/hackazon.webscantest.com","user":null,"baseImgPath":"\/user_pictures\/","dataType":"xml"};
+    </script>
+
+    <!-- JavaScript -->
+    <script src="/js/jquery-1.10.2.js"></script>
+    <script src="/js/json3.min.js"></script>
+    <script src="/js/jquery.dump.js"></script>
+    <script src="/js/jquery-migrate-1.2.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/modern-business.js"></script>
+    <script src="/js/bootstrapValidator.min.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/spin.min.js"></script>
+    <script src="/js/moment.min.js"></script>
+    <script src="/js/jquery.modern-blink.js"></script>
+    <script src="/js/ladda.min.js"></script>
+    <script src="/js/ladda.jquery.min.js"></script>
+    <script src="/js/jquery.inputmask.js"></script>
+    <script src="/js/ekko-lightbox.js"></script>
+    <script src="/js/jquery.nivo.slider.pack.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <script src="/js/star-rating.min.js"></script>
+    <script src="/js/bootstrap.file-input.js"></script>
+    <script src="/js/knockout-2.2.1.js"></script>
+    <script src="/js/knockout.localStorage.js"></script>
+    <script src="/js/koExternalTemplateEngine_all.min.js"></script>
+    <script src="/js/amf/services.js"></script>
+    <script src="/js/swfobject.js"></script>
+
+    <script src="/js/tools.js"></script>
+    <script src="/js/site.js"></script>
+
+    <script type="text/javascript">
+        // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection.
+        var swfVersionStr = "11.1.0";
+        // To use express install, set to playerProductInstall.swf, otherwise the empty string.
+        var xiSwfUrlStr = "/swf/playerProductInstall.swf";
+        var flashvars = {
+            host: "http://hackazon.webscantest.com"
+        };
+        var params = {};
+        params.quality = "high";
+        params.bgcolor = "#ffffff";
+        params.allowscriptaccess = "sameDomain";
+        params.allowfullscreen = "false";
+        var attributes = {};
+        attributes.id = "SliderBanner";
+        attributes.name = "SliderBanner";
+        attributes.align = "middle";
+
+        $(function () {
+            if ($('#flashBanner').length) {
+                setTimeout(function () {
+                    swfobject.embedSWF(
+                        "/swf/SliderBanner.swf", "flashBanner",
+                        "360", "290",
+                        swfVersionStr, xiSwfUrlStr,
+                        flashvars, params, attributes);
+                    // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
+                    swfobject.createCSS("#flashBanner", "display:block;text-align:left;");
+                }, 300);
+            }
+        });
+    </script>
+
+    </head>
+<body class="">
+    <header class="hw-header">
+    <nav class="navbar hw-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hw-navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand hw-navbar-brand" href="/"><!--span>Hackazon <em>Webscantest</em></span--><img src="/images/Hackazon.png"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse hw-navbar-collapse navbar-collapse navbar-ex1-collapse" id="hw-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                                        <li><a href="/wishlist/">Wish List</a>
+                                        <li class="dropdown hw-login-item">
+                      							        <a href="#login-box" class="login-window">Sign In / Sign Up</a>
+                                          </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle js-cart-top-icon" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                        <ul class="dropdown-menu js-cart-top-list cart-top-list">
+                                                        <li class="divider"></li>
+                            <li><a href="/cart/view">Show all items in shopping cart <i class="glyphicon glyphicon-chevron-right"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-12 col-lg-12">
+                  <div class="row">
+    <form role="search" action="/search" method="get" id="searchForm" >
+        <input type="hidden" name="id" value="" />
+        <div class="col-xs-12 col-md-12">
+            <div class="input-group" style="margin-bottom: 10px;">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="searchLabel">All <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" id="searchValue">
+                        <li class="dropdown"><a href="#">All</a></li>
+                                                                            <li class="dropdown dropdown-submenu"><a href="/category/view?id=49" data-item-id="49">Unlimited Instant Videos</a>
+                                                                    <ul class="dropdown-menu">
+                                                                                    <li><a href="/category/view?id=52" data-item-id="52">Shop Instant Video</a>
+                                                                                        <li><a href="/category/view?id=51" data-item-id="51">Prime Instant Video</a>
+                                                                                        <li><a href="/category/view?id=50" data-item-id="50">Amazon Instant Video</a>
+                                                                                </ul>
+                                                            </li>
+                                                    <li class="dropdown dropdown-submenu"><a href="/category/view?id=44" data-item-id="44">Test Fire TV</a>
+                                                                    <ul class="dropdown-menu">
+                                                                                    <li><a href="/category/view?id=48" data-item-id="48">Test Fire TV</a>
+                                                                                        <li><a href="/category/view?id=47" data-item-id="47">Test Fire Game Controller</a>
+                                                                                        <li><a href="/category/view?id=46" data-item-id="46">Prime Instant Video</a>
+                                                                                        <li><a href="/category/view?id=45" data-item-id="45">Games for Fire TV</a>
+                                                                                </ul>
+                                                            </li>
+                                                    <li class="dropdown dropdown-submenu"><a href="/category/view?id=38" data-item-id="38">Sports & Outdoors</a>
+                                                                    <ul class="dropdown-menu">
+                                                                                    <li><a href="/category/view?id=43" data-item-id="43">Team Sports</a>
+                                                                                        <li><a href="/category/view?id=42" data-item-id="42">Golf</a>
+                                                                                        <li><a href="/category/view?id=41" data-item-id="41">Fan Shop</a>
+                                                                                        <li><a href="/category/view?id=40" data-item-id="40">Cycling</a>
+                                                                                        <li><a href="/category/view?id=39" data-item-id="39">Athletic & Outdoor Clothing</a>
+                                                                                </ul>
+                                                            </li>
+                                                    <li class="dropdown dropdown-submenu"><a href="/category/view?id=32" data-item-id="32">Home, Garden & Tools</a>
+                                                                    <ul class="dropdown-menu">
+                                                                                    <li><a href="/category/view?id=37" data-item-id="37">Patio, Lawn & Garden</a>
+                                                                                        <li><a href="/category/view?id=36" data-item-id="36">Kitchen & Dining</a>
+                                                                                        <li><a href="/category/view?id=35" data-item-id="35">Furniture & Decor</a>
+                                                                                        <li><a href="/category/view?id=34" data-item-id="34">Bedding & Bath</a>
+                                                                                        <li><a href="/category/view?id=33" data-item-id="33">Appliances</a>
+                                                                                </ul>
+                                                            </li>
+                                                    <li class="dropdown dropdown-submenu"><a href="/category/view?id=26" data-item-id="26">Electronics & Computers</a>
+                                                                    <ul class="dropdown-menu">
+                                                                                    <li><a href="/category/view?id=31" data-item-id="31">Printers & Ink</a>
+                                                                                        <li><a href="/category/view?id=30" data-item-id="30">Musical Instruments</a>
+                                                                                        <li><a href="/category/view?id=29" data-item-id="29">Cell Phones & Accessories</a>
+                                                                                        <li><a href="/category/view?id=28" data-item-id="28">Car Electronics</a>
+                                                                                        <li><a href="/category/view?id=27" data-item-id="27">CAMERA, PHOTO & VIDEO</a>
+                                                                                </ul>
+                                                            </li>
+                                                    <li class="dropdown dropdown-submenu"><a href="/category/view?id=20" data-item-id="20">Clothing, Shoes & Jewelry</a>
+                                                                    <ul class="dropdown-menu">
+                                                                                    <li><a href="/category/view?id=25" data-item-id="25">Women</a>
+                                                                                        <li><a href="/category/view?id=24" data-item-id="24">Men</a>
+                                                                                        <li><a href="/category/view?id=23" data-item-id="23">Girls</a>
+                                                                                        <li><a href="/category/view?id=22" data-item-id="22">Boys</a>
+                                                                                        <li><a href="/category/view?id=21" data-item-id="21">Baby</a>
+                                                                                </ul>
+                                                            </li>
+                                                    <li class="dropdown dropdown-submenu"><a href="/category/view?id=14" data-item-id="14">Beauty, Health & Grocery</a>
+                                                                    <ul class="dropdown-menu">
+                                                                                    <li><a href="/category/view?id=19" data-item-id="19">Natural & Organic</a>
+                                                                                        <li><a href="/category/view?id=18" data-item-id="18">Mens Grooming</a>
+                                                                                        <li><a href="/category/view?id=17" data-item-id="17">Luxury Beauty</a>
+                                                                                        <li><a href="/category/view?id=16" data-item-id="16">Health, Household & Baby Care</a>
+                                                                                        <li><a href="/category/view?id=15" data-item-id="15">All beauty</a>
+                                                                                </ul>
+                                                            </li>
+                                                    <li class="dropdown dropdown-submenu"><a href="/category/view?id=8" data-item-id="8">Automotive & Industrial</a>
+                                                                    <ul class="dropdown-menu">
+                                                                                    <li><a href="/category/view?id=10" data-item-id="10">Automotive Tools & Equipment</a>
+                                                                                        <li><a href="/category/view?id=9" data-item-id="9">Automotive Parts & Accessories</a>
+                                                                                </ul>
+                                                            </li>
+                                                    <li class="dropdown dropdown-submenu"><a href="/category/view?id=2" data-item-id="2">Arts, Crafts & Sewing Coupons</a>
+                                                                    <ul class="dropdown-menu">
+                                                                                    <li><a href="/category/view?id=7" data-item-id="7">Sewing</a>
+                                                                                        <li><a href="/category/view?id=6" data-item-id="6">Scrapbooking</a>
+                                                                                        <li><a href="/category/view?id=5" data-item-id="5">Painting</a>
+                                                                                        <li><a href="/category/view?id=4" data-item-id="4">Jewelry-Making</a>
+                                                                                        <li><a href="/category/view?id=3" data-item-id="3">Craft Supplies</a>
+                                                                                </ul>
+                                                            </li>
+                                            </ul>
+                </div>
+                <!-- /btn-group -->
+                <input type="text" class="form-control" placeholder="Search products..." maxlength="100" name="searchString" value="">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Search!</button>
+                </span>
+            </div>
+            <!-- /input-group -->
+        </div>
+    </form>
+</div>                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+</header>
+    <div id="container">
+        
+
+    <div class="section home-top-section">
+        <!--<div class="section-colored text-center">-->
+        <div class="container well">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-lg-6 col-md-6">
+                                                    <h3><i class="fa fa-pencil"></i><a href="user/register"> Register on the site</a></h3>
+                                            </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3 style="text-align: right"><i class="fa fa-thumbs-up"></i><a href="bestprice"> Get the Best Price</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!--</div>-->
+        <!-- /.container -->
+    </div>
+
+    <div class="section home-top-product-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8">
+
+                    <!-- START CONTENT ITEM -->
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <h2>Special selection</h2>
+                        </div>
+                                            </div>
+                    <!-- END CONTENT ITEM -->
+
+                    <!-- START CONTENT ITEM -->
+                    <div class="row product-list-inline-small">
+                                                                                                                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="thumbnail">
+        <div class="img-box">
+            <a href="/product/view?id=64"><img class="img-responsive img-home-portfolio"
+                    src="/products_pictures/Molton_Brown_Indian_Cress_Purifying_Shampoo_10_fl_oz_small_ad127c.jpg" alt="
+Molton Brown Indian Cress Purifying Shampoo, 10 fl. oz.
+"></a>
+        </div>
+
+        <div class="caption">
+            <a href="/product/view?id=64" title="
+Molton Brown Indian Cress Purifying Shampoo, 10 fl. oz.
+">Molton Brown Indian Cress Purifying Shampoo, 10...</a>
+
+            <p class="product-annotation"><span class="text-block" title="
+London via Bolivia. Out with daily grime. In with cared for, healthy-looking hair.
+">London via Bolivia. Out with daily grime. In with cared for...</span>
+                <span class="label label-info price pull-right">$30</span>
+                            <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="64"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>            </p>
+        </div>
+    </div>
+</div>                                                                                                                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="thumbnail">
+        <div class="img-box">
+            <a href="/product/view?id=1"><img class="img-responsive img-home-portfolio"
+                    src="/products_pictures/Martha_Stewart_Crafts_Garland_Pink_Pom_Pom_Small_small_7054ab.jpg" alt="
+Martha Stewart Crafts Garland, Pink Pom Pom Small
+"></a>
+        </div>
+
+        <div class="caption">
+            <a href="/product/view?id=1" title="
+Martha Stewart Crafts Garland, Pink Pom Pom Small
+">Martha Stewart Crafts Garland, Pink Pom Pom Small</a>
+
+            <p class="product-annotation"><span class="text-block" title="
+Fun, festive party decorative pop poms. Perfect for any occasion. Pre-cut pieces for easy assembly. Contains 2 pink pre-Strung 6-foot long garlands.
+">Fun, festive party decorative pop poms. Perfect for any...</span>
+                <span class="label label-info price pull-right">$9</span>
+                            <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="1"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>            </p>
+        </div>
+    </div>
+</div>                                                                                                                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="thumbnail">
+        <div class="img-box">
+            <a href="/product/view?id=72"><img class="img-responsive img-home-portfolio"
+                    src="/products_pictures/Edwin_Jagger_Ivory_Porcelain_Shaving_Soap_Bowl_With_Handle_small_ca3cf2.jpg" alt="
+Edwin Jagger Ivory Porcelain Shaving Soap Bowl With Handle
+"></a>
+        </div>
+
+        <div class="caption">
+            <a href="/product/view?id=72" title="
+Edwin Jagger Ivory Porcelain Shaving Soap Bowl With Handle
+">Edwin Jagger Ivory Porcelain Shaving Soap Bowl...</a>
+
+            <p class="product-annotation"><span class="text-block" title="
+Classic ivory colour porcelain shaving soap bowl with handle and Edwin Jagger logo. This is an ideal accompaniment to a wet shavers daily routine. Used with an Edwin Jagger natural, paraben free, traditional shaving soap it will allow you to whip up a rich shaving lather to complement your shave.
+Ideal for use with many hard shaving soap refills
+Wonderful accompaniment for any wet shaving routine
+A must for shaving brush users
+Used with quality shaving soap and hot water whip up a rich lather for wet shaving
+Excellent gift for a wet shaving man
+">Classic ivory colour porcelain shaving soap bowl with handle...</span>
+                <span class="label label-info price pull-right">$33.3</span>
+                            <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="72"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>            </p>
+        </div>
+    </div>
+</div>                                                                        </div>
+                    <!-- END CONTENT ITEM -->
+
+                    <!-- START CONTENT ITEM -->
+                    <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-6">
+            <div class="article">
+                <article>
+                                            <div class="review-icon-box"><span class="review-icon glyphicon glyphicon-refresh"></span></div>
+                                        <h4>J369</h4>
+                    <h5>about <a href="/product/view?id=89">
+VTech Communications Safe and Sound 2 Camera Video and Audio Baby Monitor
+</a></h5>
+
+                    <p>I prefer to buy printer ink that is from the manufacturer. This is a good printer, good printer ink, and good results. <a href="/product/view?id=89">More
+                            <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                </article>
+            </div>
+        </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-6">
+            <div class="article">
+                <article>
+                                            <div class="review-icon-box"><span class="review-icon glyphicon glyphicon-refresh"></span></div>
+                                        <h4>eandj</h4>
+                    <h5>about <a href="/product/view?id=94">
+U.S. Polo Assn. Boy's Classic Fleece Hooded Jacket with Sherpa Lining
+</a></h5>
+
+                    <p>Very useful as a backup storage for my camera. I would recommend this. <a href="/product/view?id=94">More
+                            <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                </article>
+            </div>
+        </div>
+    </div>                    <!-- END CONTENT ITEM -->
+
+                </div>
+
+                <div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
+                    <br>
+                                                                <!-- START CONTENT ITEM -->
+<div class="row">
+    <div class="col-xs-12">
+        <div class="well well-small">
+            <ul class="nav nav-list">
+                <li class="nav-header">Top 3 most popular</li>
+                                    <li><a href="/product/view?id=94">
+U.S. Polo Assn. Boy's Classic Fleece Hooded Jacket with Sherpa Lining
+</a></li>
+                                    <li><a href="/product/view?id=92">
+Dakine Mission Backpack
+</a></li>
+                                    <li><a href="/product/view?id=64">
+Molton Brown Indian Cress Purifying Shampoo, 10 fl. oz.
+</a></li>
+                            </ul>
+        </div>
+    </div>
+</div>
+<!-- END CONTENT ITEM -->                                            <!-- START CONTENT ITEM -->
+<div class="row">
+    <div class="col-xs-12">
+        <div class="well well-small">
+            <ul class="nav nav-list">
+                <li class="nav-header">Top 3 best selling</li>
+                                    <li><a href="/product/view?id=153">
+Mustache Party Food and Cupcake Picks - 25 ct
+</a></li>
+                                    <li><a href="/product/view?id=113">
+Panasonic LUMIX DMC-GH4KBODY 16.05MP Digital Single Lens Mirrorless Camera with 4K Cinematic Video (Body Only)
+</a></li>
+                                    <li><a href="/product/view?id=181">
+Spalding NBA Street Basketball
+</a></li>
+                            </ul>
+        </div>
+    </div>
+</div>
+<!-- END CONTENT ITEM -->                    
+                    <!-- START CONTENT ITEM -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="flashBanner">
+    <p>
+        To view this page ensure that Adobe Flash Player version
+        11.1.0 or greater is installed.
+    </p>
+    <script type="text/javascript">
+        var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
+        document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='"
+            + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
+    </script>
+</div>                        </div>
+                    </div>
+                    <!-- END CONTENT ITEM -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- /.section-colored -->
+<div class="col-lg-12 text-center">
+    <div class="container section-title">
+        <h2>Best Choice</h2>
+    </div>
+    <hr>
+</div>
+
+<div class="home-product-sections">
+    <div class="container product-list">
+
+
+        <div class="row">
+        <div class="col-xs-12">
+
+            <!-- START CONTENT ITEM -->
+            <div class="product-list-inline-large">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="55">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="55"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=55">
+                                <span class="label label-info price">$56</span>
+                                <!--span class="label label-danger price price-over">$56</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Vega_One_All_in_One_Nutritional_Shake_French_Vanilla_small_09aea7.jpg"
+                                    alt="
+Vega One All-in-One Nutritional Shake, French Vanilla, 30 oz
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=55">
+Vega One All-in-One Nutritional Shake, French Vanilla, 30 oz
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=16">all products in category</a>
+
+                    </div>
+                </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="12">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="12"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=12">
+                                <span class="label label-info price">$8</span>
+                                <!--span class="label label-danger price price-over">$8</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Art_Advantage_Wood_Palette_Value_Pack_With_Free_Brushes_and_Kniv_small_fc534c.jpg"
+                                    alt="
+Art Advantage Wood Palette Value-Pack With Free Brushes and Knives
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=12">
+Art Advantage Wood Palette Value-Pack With Free Brushes and Knives
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=5">all products in category</a>
+
+                    </div>
+                </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="56">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="56"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=56">
+                                <span class="label label-info price">$16</span>
+                                <!--span class="label label-danger price price-over">$16</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Baxter_of_California_Daily_Protein_Shampoo_10_fl_oz_small_fcca44.jpg"
+                                    alt="
+Baxter of California Daily Protein Shampoo, 10 fl. oz.
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=56">
+Baxter of California Daily Protein Shampoo, 10 fl. oz.
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=17">all products in category</a>
+
+                    </div>
+                </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="101">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="101"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=101">
+                                <span class="label label-info price">$238</span>
+                                <!--span class="label label-danger price price-over">$238</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Diesel_Men_s_Sleenker_Skinny_Leg_Jean_0608D_small_ac8841.jpg"
+                                    alt="
+Diesel Men's Sleenker Skinny-Leg Jean 0608D
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=101">
+Diesel Men's Sleenker Skinny-Leg Jean 0608D
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=24">all products in category</a>
+
+                    </div>
+                </div>
+                </div>
+            <!-- END CONTENT ITEM -->
+
+        </div>
+    </div>
+        </div>
+</div>
+<div class="container"><div class="col-xs-12"><div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-md-4">
+            <div class="article">
+                <article>
+                                        <h4>Ilovemovies</h4>
+                    <h5>about <a href="/product/view?id=45">
+Pretika SonicDermabrasion Facial Brush
+</a></h5>
+
+                    <p>This product is great for someone who doesn	 watch television regularly and you just want something on. I did away with cable awhile ago and I am very content with picking up local channels. I get about 13 HD quality channels. <a href="/product/view?id=45">More
+                            <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                </article>
+            </div>
+        </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-md-4">
+            <div class="article">
+                <article>
+                                        <h4>Broorsdic</h4>
+                    <h5>about <a href="/product/view?id=18">
+K&CompanySmash Folio, Pretty Pink
+Pretty style: Like a mint julep on the veranda.
+Embossed chipboard cover
+Book size is 7-3/4 by 10-1/4 inches
+Includes 40 pages
+</a></h5>
+
+                    <p>vegas world casino games <a href="https://onlinecasino2018.us.org/">gsn casino games</a> free casino games <a href="https://onlinecasino2018.us.org/">online casino slots</a> | [url=https://onlinecasino2018.us.org/]caesars online casino[/url] [url=https://onlinecasino2018.us.org/]lady luck[/url] <a href="/product/view?id=18">More
+                            <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                </article>
+            </div>
+        </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-md-4">
+            <div class="article">
+                <article>
+                                        <h4>vex_test</h4>
+                    <h5>about <a href="/product/view?id=72">
+Edwin Jagger Ivory Porcelain Shaving Soap Bowl With Handle
+</a></h5>
+
+                    <p>vex_test <a href="/product/view?id=72">More
+                            <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                </article>
+            </div>
+        </div>
+    </div></div></div><!-- /.section-colored -->
+<div class="col-lg-12 text-center">
+    <div class="container section-title">
+        <h2></h2>
+    </div>
+    <hr>
+</div>
+
+<div class="home-product-sections">
+    <div class="container product-list">
+
+
+        <div class="row">
+        <div class="col-xs-12">
+
+            <!-- START CONTENT ITEM -->
+            <div class="product-list-inline-large">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="193">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="193"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=193">
+                                <span class="label label-info price">$4.92</span>
+                                <!--span class="label label-danger price price-over">$4.92</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Houseboat_small_50cc33.jpg"
+                                    alt="
+Houseboat 
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=193">
+Houseboat 
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=46">all products in category</a>
+
+                    </div>
+                </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="156">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="156"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=156">
+                                <span class="label label-info price">$24</span>
+                                <!--span class="label label-danger price price-over">$24</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/High_Cotton_Doormat_Open_Policy_Wine_small_77b23f.jpg"
+                                    alt="
+High Cotton Doormat, Open Policy Wine
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=156">
+High Cotton Doormat, Open Policy Wine
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=37">all products in category</a>
+
+                    </div>
+                </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="190">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="190"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=190">
+                                <span class="label label-info price">$4</span>
+                                <!--span class="label label-danger price price-over">$4</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Coming_to_America_small_12b372.jpg"
+                                    alt="
+Coming to America
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=190">
+Coming to America
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=46">all products in category</a>
+
+                    </div>
+                </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="158">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="158"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=158">
+                                <span class="label label-info price">$49</span>
+                                <!--span class="label label-danger price price-over">$49</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Landmann_82433_8_Foot_Firewood_Log_Rack_Only_small_c81937.jpg"
+                                    alt="
+Landmann 82433 8-Foot Firewood Log Rack Only
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=158">
+Landmann 82433 8-Foot Firewood Log Rack Only
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=37">all products in category</a>
+
+                    </div>
+                </div>
+                </div>
+            <!-- END CONTENT ITEM -->
+
+        </div>
+    </div>
+        </div>
+</div>
+
+    <div class="section-colored">
+
+        <!-- /.section-colored -->
+<div class="col-lg-12 text-center">
+    <div class="container section-title">
+        <h2>What Other Customers Are Looking At Right Now</h2>
+    </div>
+    <hr>
+</div>
+
+<div class="home-product-sections">
+    <div class="container product-list">
+
+
+        <div class="row">
+        <div class="col-xs-12">
+
+            <!-- START CONTENT ITEM -->
+            <div class="product-list-inline-large">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="182">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="182"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=182">
+                                <span class="label label-info price">$28.5</span>
+                                <!--span class="label label-danger price price-over">$28.5</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/STX_FiddleSTX_Two_Pack_Mini_Super_Power_with_Plastic_Handle_and__small_0c289e.jpg"
+                                    alt="
+STX FiddleSTX Two Pack Mini Super Power with Plastic Handle and One Ball, 30-Inch
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=182">
+STX FiddleSTX Two Pack Mini Super Power with Plastic Handle and One Ball, 30-Inch
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=43">all products in category</a>
+
+                    </div>
+                </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="208">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="208"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=208">
+                                <span class="label label-info price">$0</span>
+                                <!--span class="label label-danger price price-over">$0</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Pretty_Little_Liars_small_ee48f6.jpg"
+                                    alt="
+Pretty Little Liars
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=208">
+Pretty Little Liars
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=52">all products in category</a>
+
+                    </div>
+                </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="92">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="92"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=92">
+                                <span class="label label-info price">$55</span>
+                                <!--span class="label label-danger price price-over">$55</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Dakine_Mission_Backpack_small_70059a.jpg"
+                                    alt="
+Dakine Mission Backpack
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=92">
+Dakine Mission Backpack
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=22">all products in category</a>
+
+                    </div>
+                </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail light product-item" data-id="104">
+                                    <a href="/cart/view" class="btn btn-primary pull-left ladda-button buy-link js-add-to-cart-shortcut"
+               data-product-id="104"
+               data-style="contract" title="Add to Cart"><span class="ladda-label"><span
+                            class="glyphicon glyphicon-shopping-cart"></span></span></a>                        <div class="img-box">
+                            <a href="/product/view?id=104">
+                                <span class="label label-info price">$21</span>
+                                <!--span class="label label-danger price price-over">$21</span-->
+                                <img class="img-home-portfolio" alt="" src="/products_pictures/Tommy_Hilfiger_Men_s_Ranger_Passcase_Wallet_small_c5ae2b.jpg"
+                                    alt="
+Tommy Hilfiger Men's Ranger Passcase Wallet
+" >
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <a href="/product/view?id=104">
+Tommy Hilfiger Men's Ranger Passcase Wallet
+</a>
+                        </div>
+                        <div class="ratings">
+                            <p>            <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+    </p>
+                        </div>
+                        <a class="btn btn-default btn-block" href="/category/view?id=24">all products in category</a>
+
+                    </div>
+                </div>
+                </div>
+            <!-- END CONTENT ITEM -->
+
+        </div>
+    </div>
+        </div>
+</div>
+
+    </div>
+    <!-- /.section-colored -->
+
+
+    <div class="section">
+        <div class="container">
+                        <div class="row well">
+                <div class="col-lg-8 col-md-8">
+                    <h4>Sign up for mailing list and get the best products and best price!</h4>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <a class="btn btn-lg btn-primary pull-right" href="/user/login">Sign up</a>
+                </div>
+            </div>
+            <!-- /.row -->
+                    </div>
+        <!-- /.container -->
+    </div>
+
+<div class="container">
+    <div class="footer">
+        <div class="row hidden-print">
+                            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                    <!-- START CONTENT ITEM -->
+                                                                <ul class="unstyled">
+                            <li class="footer-title"><a href="/category/view?id=49">Unlimited Instant Videos</a></li>
+                                                                                                                </ul>
+                                            <ul class="unstyled">
+                            <li class="footer-title"><a href="/category/view?id=14">Beauty, Health & Grocery</a></li>
+                                                                                                                </ul>
+                                        <!-- END CONTENT ITEM -->
+                </div>
+                            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                    <!-- START CONTENT ITEM -->
+                                                                <ul class="unstyled">
+                            <li class="footer-title"><a href="/category/view?id=44">Test Fire TV</a></li>
+                                                                                                                </ul>
+                                            <ul class="unstyled">
+                            <li class="footer-title"><a href="/category/view?id=8">Automotive & Industrial</a></li>
+                                                                                                                </ul>
+                                        <!-- END CONTENT ITEM -->
+                </div>
+                            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                    <!-- START CONTENT ITEM -->
+                                                                <ul class="unstyled">
+                            <li class="footer-title"><a href="/category/view?id=38">Sports & Outdoors</a></li>
+                                                                                                                </ul>
+                                            <ul class="unstyled">
+                            <li class="footer-title"><a href="/category/view?id=2">Arts, Crafts & Sewing Coupons</a></li>
+                                                                                                                </ul>
+                                        <!-- END CONTENT ITEM -->
+                </div>
+                            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                    <!-- START CONTENT ITEM -->
+                                                                <ul class="unstyled">
+                            <li class="footer-title"><a href="/category/view?id=32">Home, Garden & Tools</a></li>
+                                                                                                                </ul>
+                                        <!-- END CONTENT ITEM -->
+                </div>
+                            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                    <!-- START CONTENT ITEM -->
+                                                                <ul class="unstyled">
+                            <li class="footer-title"><a href="/category/view?id=26">Electronics & Computers</a></li>
+                                                                                                                </ul>
+                                        <!-- END CONTENT ITEM -->
+                </div>
+                            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                    <!-- START CONTENT ITEM -->
+                                                                <ul class="unstyled">
+                            <li class="footer-title"><a href="/category/view?id=20">Clothing, Shoes & Jewelry</a></li>
+                                                                                                                </ul>
+                                        <!-- END CONTENT ITEM -->
+                </div>
+                    </div>
+    </div>
+</div>    </div>
+
+    <div class="container" >
+        <hr>
+<footer>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>Copyright &copy; NTObjectives 2014</p>
+        </div>
+    </div>
+</footer>
+
+<script type="text/x-template" id="tplAlertContent">
+    <div class="text-center">
+        <a href="#" class="btn btn-primary js-yes">Yes</a>
+        <a href="#" class="btn btn-danger js-no">No</a>
+    </div>
+</script>    </div>
+            <div id="login-box" class="login-popup">
+            <a href="#" class="close" data-toggle="tooltip" data-placement="top" title="Close"><i class="glyphicon glyphicon-remove"></i></a>
+            <form role="form" method="post" class="signin" action="/user/login" id="loginForm">
+                <h2>Please login <small></small></h2>
+                <hr class="colorgraph">
+                <div class="form-group">
+                    <input type="text" maxlength="100" required name="username" id="username" autocomplete="off" class="form-control input-lg" placeholder="Username or Email" tabindex="1">
+                </div>
+                <div class="form-group">
+                    <input type="password" maxlength="100" required name="password" autocomplete="off" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+                </div>
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-6 col-md-6"><button id="loginbtn" type="submit" class="btn btn-success btn-block btn-lg">Sign In</button></div>
+                    <div class="col-xs-6 col-md-6">
+                        <div>
+                            <span class="login-social-span">Or login via</span>
+                            <ul class="list-unstyled list-inline list-social-icons">
+                                <li class="tooltip-social facebook-link"><a href="/facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-3x"></i></a></li>
+                                <li class="tooltip-social twitter-link"><a href="/twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-3x"></i></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-md-6"><a href="/user/password" class="btn btn-info btn-lg" style="width:100%">Forgot your password?</a></div>
+                    <div class="col-xs-6 col-md-6"><a href="/user/register" class="btn btn-info btn-lg" style="width:100%">New user?</a></div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            //A very basic way to open a popup
+
+            function popup(link, windowname) {
+                window.open(link.href, windowname, 'width=400,height=200,scrollbars=yes');
+                return false;
+            }
+            jQuery(function ($) {
+                $('#loginForm').bootstrapValidator({
+                    feedbackIcons: {
+                        valid: 'glyphicon glyphicon-ok',
+                        invalid: 'glyphicon glyphicon-remove',
+                        validating: 'glyphicon glyphicon-refresh'
+                    },
+                    container: 'tooltip'
+                });
+            });
+        </script>
+        </body>
+</html>
