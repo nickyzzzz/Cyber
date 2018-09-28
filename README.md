@@ -9,7 +9,7 @@ Copy the files Unzip it and Install
 This is Tool that can take Alteration 
 You can edit the files .py`s and many more has per your requirements
 
-
+After Installation change the dir/ and Run Cyber in the Command prompt
 Troubleshooting and Issues Regarding This Tool Please Write a mail to Akash.venky091@gmail.com
 Activity 
 (TIP)
